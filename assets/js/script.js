@@ -57,13 +57,15 @@ if (isEdit) {
     //add entire list item to list
     var taskActionsEl = createTaskActions(taskIdCounter);
     listItemEl.appendChild(taskActionsEl);
+
+    
     
     switch (taskDataObj.status) {
-        case "to-do":
+        case "to do":
             taskActionsEl.querySelector("select[name='status-change']").selectedIndex = 0;
             tasksToDoEl.append(listItemEl);
             break;
-        case "in-progress":
+        case "in progress":
             taskActionsEl.querySelector("select[name='status-change']").selectedIndex = 1;
             tasksInProgressEl.append(listItemEl);
             break;
